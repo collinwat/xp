@@ -16,4 +16,3 @@ Libraries
 - [stats.js](https://github.com/mrdoob/stats.js/)
 - [dat.gui](http://workshop.chromeexperiments.com/examples/gui)
 - [svg.js](http://svgjs.com/)
-- [moment.js](http://momentjs.com/)
