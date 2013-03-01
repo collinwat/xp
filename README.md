@@ -1,12 +1,11 @@
-Clocky
-======
+Desex
+=====
 
-This is a place to experiment with different web technologies and design
-techniques.
+This is a place to drop creative [des]ign [ex]periments and demos for
+the web.
 
-The theme and protagonist in this story is a clock.
-
-[http://collinwat.github.com/clocky](http://collinwat.github.com/clocky)
+The initial goal is to experiment with modern browser features and
+find interesting ways to incorporate into the design process.
 
 
 Libraries
@@ -16,4 +15,4 @@ Libraries
 - [tween.js](https://github.com/sole/tween.js/)
 - [stats.js](https://github.com/mrdoob/stats.js/)
 - [dat.gui](http://workshop.chromeexperiments.com/examples/gui)
-
+- [svg.js](http://svgjs.com/)
