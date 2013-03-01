@@ -1,15 +1,9 @@
-clocky
+Clocky
 ======
 
 This is a place to experiment with different web technologies and design
 techniques.
 
-The protagonist is a clock...
+The theme and protagonist in this story is a clock.
 
-Go!
-
-
-Deploy
-------
-
-    git push -f origin master:gh-pages
+[http://collinwat.github.com/clocky](http://collinwat.github.com/clocky)
