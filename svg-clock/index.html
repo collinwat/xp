@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="description" content="Hello wireframe world!" />
+    <meta name="description" content="An svg clock using svgjs" />
     <meta name="viewport" content="width=device-width" />
-    <title>Desex: Hello World!</title>
+    <title>Desex: SVG Clock</title>
 
     <link rel="stylesheet" href="../lib/normalize.min.css" />
     <link rel="stylesheet" href="../lib/project.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <!--[if lt IE 9]>
@@ -22,10 +20,8 @@
       activate Google Chrome Frame</a> to improve your experience.
     </p>
     <![endif]-->
-
-    <script src="../lib/three.min.js"></script>
-    <script src="../lib/project.js"></script>
+    <div id="scene"></div>
+    <script src="../lib/svg.min.js"></script>
     <script src="index.js"></script>
-    <script type="text/javascript">CY.App.run();</script>
   </body>
 </html>
