@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="An svg clock using svgjs" />
     <meta name="viewport" content="width=device-width" />
-    <title>Desex: SVG Clock</title>
+    <title>Desex: Clock</title>
 
     <link rel="stylesheet" href="../lib/normalize.min.css" />
     <link rel="stylesheet" href="../lib/project.css" />
@@ -20,8 +20,14 @@
       activate Google Chrome Frame</a> to improve your experience.
     </p>
     <![endif]-->
-    <div id="scene"></div>
+    <div class="container">
+      <div id="svg-scene1" class="scene"></div>
+    </div>
+    <script src="../lib/moment.min.js"></script>
     <script src="../lib/svg.min.js"></script>
     <script src="index.js"></script>
+    <script>
+      var svg1 = new SVGClock('svg-scene1');
+    </script>
   </body>
 </html>
