@@ -12,22 +12,32 @@
     }
 
     this.scene = svg(id);
-    this.border = this.createBorder();
+    this.border = this.createBorder(this.radius + 9).attr({
+      stroke: '#ccc',
+      'stroke-width': 4
+    });
+    this.frame = this.createBorder();
     this.hourHand = this.createHand(0.3);
-    this.minuteHand = this.createHand(0.6);
+    this.minuteHand = this.createHand(0.6).attr({
+      'stroke-width': 8,
+    });
+    this.secondHand = this.createHand(0.8).attr({
+      stroke: '#8C1F1F',
+      'stroke-width': 3
+    });
     this.update();
   }
 
   SVGClock.prototype = {
 
-    createBorder: function() {
-      var border = this.scene.circle((this.radius * 2) - 20);
+    createBorder: function(r) {
+      var border = this.scene.circle(((r || this.radius) * 2) - 25);
       border.center(this.radius, this.radius);
       border.attr({
         fill: 'none',
         stroke: '#000000',
         'stroke-miterlimit': 10,
-        'stroke-width': 20,
+        'stroke-width': 15,
       });
       return border;
     },
@@ -46,6 +56,20 @@
     },
 
     update: function() {
+      var time = new Date();
+      this.hours = time.getHours() % 12;
+      this.minutes = time.getMinutes();
+      this.seconds = time.getSeconds();
+      this.milliseconds = time.getMilliseconds();
+
+      this.rotate(this.hourHand, 360 * (this.hours / 12));
+      this.rotate(this.minuteHand, 360 * (this.minutes / 60));
+
+      var m = this.milliseconds / 1000;
+      m = (m > 1 || m < 0) ? 0 : m;
+
+      this.rotate(this.secondHand, 360 * ((this.seconds + m) / 60));
+
       this.scene.size(this.width, this.height);
       this.scene.viewbox(this.viewbox.x,
                          this.viewbox.y,
@@ -54,8 +78,11 @@
     },
 
     rotate: function(elem, degs) {
-      var params = [degs, this.radius, this.radius].join(' ');
-      elem.attr('transform', 'rotate(' + params + ')');
+      elem.transform({
+        rotation: degs,
+        cx: this.radius,
+        cy: this.radius
+      });
     }
   };
 

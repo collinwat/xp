@@ -28,6 +28,11 @@
     <script src="index.js"></script>
     <script>
       var svg1 = new SVGClock('svg-scene1');
+      function loop() {
+        requestAnimationFrame(loop);
+        svg1.update();
+      }
+      loop();
     </script>
   </body>
 </html>
