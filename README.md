@@ -4,8 +4,8 @@ Desex
 This is a place to drop creative [des]ign [ex]periments and demos for
 the web.
 
-The initial goal is to experiment with modern browser features and
-find interesting ways to incorporate into the design process.
+The goal is to experiment with modern browser features and
+find interesting ways to incorporate them into the design process.
 
 
 Libraries
