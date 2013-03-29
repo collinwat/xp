@@ -1,0 +1,207 @@
+.rotate {
+  -webkit-animation-duration: 1s;
+     -moz-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+     -moz-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+     -moz-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.rotate .text {
+  -webkit-animation-duration: 1s;
+     -moz-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+     -moz-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+     -moz-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+
+/* Rotate from 0 -> 90 */
+
+@-webkit-keyframes rotateForward90 {
+  0% { -webkit-transform: rotate(0deg); }
+  75%, 100% { -webkit-transform: rotate(90deg); }
+}
+
+@-webkit-keyframes rotateTextForward90 {
+  0%, 10% { -webkit-transform: rotate(0deg); }
+  70%, 100% { -webkit-transform: rotate(-90deg); }
+}
+
+.rotate-forward-90 {
+  -webkit-animation-name: rotateForward90;
+          animation-name: rotateForward90;
+}
+
+.rotate-forward-90 .text {
+  -webkit-animation-name: rotateTextForward90;
+          animation-name: rotateTextForward90;
+}
+
+
+/* Rotate from 90 -> 180 */
+
+@-webkit-keyframes rotateForward180 {
+  0% { -webkit-transform: rotate(90deg); }
+  75%, 100% { -webkit-transform: rotate(180deg); }
+}
+
+@-webkit-keyframes rotateTextForward180 {
+  0%, 10% { -webkit-transform: rotate(-90deg); }
+  70%, 100% { -webkit-transform: rotate(-180deg); }
+}
+
+.rotate-forward-180 {
+  -webkit-animation-name: rotateForward180;
+          animation-name: rotateForward180;
+}
+
+.rotate-forward-180 .text {
+  -webkit-animation-name: rotateTextForward180;
+          animation-name: rotateTextForward180;
+}
+
+
+/* Rotate from 180 -> 270 */
+
+@-webkit-keyframes rotateForward270 {
+  0% { -webkit-transform: rotate(180deg); }
+  75%, 100% { -webkit-transform: rotate(270deg); }
+}
+
+@-webkit-keyframes rotateTextForward270 {
+  0%, 10% { -webkit-transform: rotate(-180deg); }
+  70%, 100% { -webkit-transform: rotate(-270deg); }
+}
+
+.rotate-forward-270 {
+  -webkit-animation-name: rotateForward270;
+          animation-name: rotateForward270;
+}
+
+.rotate-forward-270 .text {
+  -webkit-animation-name: rotateTextForward270;
+          animation-name: rotateTextForward270;
+}
+
+
+/* Rotate from 270 -> 0 */
+
+@-webkit-keyframes rotateForward0 {
+  0% { -webkit-transform: rotate(270deg); }
+  75%, 100% { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes rotateTextForward0 {
+  0%, 10% { -webkit-transform: rotate(-270deg); }
+  70%, 100% { -webkit-transform: rotate(-360deg); }
+}
+
+.rotate-forward-0 {
+  -webkit-animation-name: rotateForward0;
+          animation-name: rotateForward0;
+}
+
+.rotate-forward-0 .text {
+  -webkit-animation-name: rotateTextForward0;
+          animation-name: rotateTextForward0;
+}
+
+
+/* Rotate from 0 -> -90 */
+
+@-webkit-keyframes rotateBack270 {
+  0% { -webkit-transform: rotate(0deg); }
+  75%, 100% { -webkit-transform: rotate(-90deg); }
+}
+
+@-webkit-keyframes rotateTextBack270 {
+  0%, 10% { -webkit-transform: rotate(0deg); }
+  70%, 100% { -webkit-transform: rotate(90deg); }
+}
+
+.rotate-back-270 {
+  -webkit-animation-name: rotateBack270;
+          animation-name: rotateBack270;
+}
+
+.rotate-back-270 .text {
+  -webkit-animation-name: rotateTextBack270;
+          animation-name: rotateTextBack270;
+}
+
+
+/* Rotate from -90 -> -180 */
+
+@-webkit-keyframes rotateBack180 {
+  0% { -webkit-transform: rotate(-90deg); }
+  75%, 100% { -webkit-transform: rotate(-180deg); }
+}
+
+@-webkit-keyframes rotateTextBack180 {
+  0%, 10% { -webkit-transform: rotate(90deg); }
+  70%, 100% { -webkit-transform: rotate(180deg); }
+}
+
+.rotate-back-180 {
+  -webkit-animation-name: rotateBack180;
+          animation-name: rotateBack180;
+}
+
+.rotate-back-180 .text {
+  -webkit-animation-name: rotateTextBack180;
+          animation-name: rotateTextBack180;
+}
+
+
+/* Rotate from -180 -> -90 */
+
+@-webkit-keyframes rotateBack90 {
+  0% { -webkit-transform: rotate(-180deg); }
+  75%, 100% { -webkit-transform: rotate(-270deg); }
+}
+
+@-webkit-keyframes rotateTextBack90 {
+  0%, 10% { -webkit-transform: rotate(180deg); }
+  70%, 100% { -webkit-transform: rotate(270deg); }
+}
+
+.rotate-back-90 {
+  -webkit-animation-name: rotateBack90;
+          animation-name: rotateBack90;
+}
+
+.rotate-back-90 .text {
+  -webkit-animation-name: rotateTextBack90;
+          animation-name: rotateTextBack90;
+}
+
+
+/* Rotate from 90 -> 0 */
+
+@-webkit-keyframes rotateBack0 {
+  0% { -webkit-transform: rotate(-270deg); }
+  75%, 100% { -webkit-transform: rotate(-360deg); }
+}
+
+@-webkit-keyframes rotateTextBack0 {
+  0%, 10% { -webkit-transform: rotate(270deg); }
+  70%, 100% { -webkit-transform: rotate(360deg); }
+}
+
+.rotate-back-0 {
+  -webkit-animation-name: rotateBack0;
+          animation-name: rotateBack0;
+}
+
+.rotate-back-0 .text {
+  -webkit-animation-name: rotateTextBack0;
+          animation-name: rotateTextBack0;
+}
