@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="An editable bar graph with highcharts" />
+    <title>Highcharts Bar Graph | XP</title>
+
+    <link rel="stylesheet" href="../lib/normalize.min.css" />
+    <link rel="stylesheet" href="../lib/project.css" />
+    <link rel="stylesheet" href="http://static.haikudeck.com/lib/bootstrap2.3.1/css/bootstrap.css" />
+    <link rel="stylesheet" href="index.css" />
+    <style type="text/css">
+      hr {
+        margin: 10px 0px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .margin-center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .center {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      input.small {
+        width: 100px;
+      }
+
+      .slider {
+        position: relative;
+        height: 15px;
+        width: 206px;
+        margin: 0px auto;
+      }
+
+      .slider input[type=range] {
+        width: 100%;
+        position: absolute;
+        margin-top: -4px;
+        top: 0px;
+        left: 0px;
+        -webkit-appearance: none;
+        appearance: none;
+        background: none;
+      }
+
+      .slider progress {
+        width: 194px;
+        display: block;
+        margin-top: 4px;
+        margin-left: 6px;
+        -webkit-appearance: none;
+        appearance: none;
+        height: 8px;
+      }
+
+      .slider progress::-webkit-progress-bar {
+        background-color: #eee;
+        border-radius: 4px;
+      }
+
+      .slider progress::-webkit-progress-value {
+        background-color: #DE5228;
+        border-radius: 4px;
+      }
+
+      .steps {
+        margin: 0px;
+        font-size: 32px;
+      }
+
+      .sample {
+        width: 25px;
+        height: 14px;
+        display: inline-block;
+        border: solid 1px #ddd;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+    <p class="chromeframe">
+      You are using an <strong>outdated</strong> browser. Please
+      <a href="http://browsehappy.com/">upgrade your browser</a>
+      or <a href="http://www.google.com/chromeframe/?redirect=true">
+      activate Google Chrome Frame</a> to improve your experience.
+    </p>
+    <![endif]-->
+    <div id="editor">
+      <div id="canvas"></div>
+      <div id="controls" class="text-center">
+        <h2>Edit Y-Axis Units</h2>
+        <br />
+        <div>
+          <label class="input-prepend">
+            <span class="add-on">Max Value</span>
+            <input type="number" class="small" step="1" data-bind="value: ymax" />
+          </label>
+          <label class="input-prepend">
+            <span class="add-on">Min Value</span>
+            <input type="number" class="small" step="1" data-bind="value: ymin" />
+          </label>
+
+          <label>Number of Intervals</label>
+          <br />
+          <p class="steps" data-bind="text: steps"></p>
+          <br />
+          <div class="slider">
+            <input type="range" name="steps" min="2" max="10" data-bind="value: steps" />
+            <progress min="0" max="8" data-bind="attr: { value: stepProgress }"></progress>
+          </div>
+        </div>
+        <br />
+        <hr />
+        <button class="btn" data-bind="click: addData, clickBubble: false, disable: data().length  > 7">Add Bar</button>
+        <hr />
+        <div data-bind="visible: selected, with: selected">
+          <h2>Edit Bar</h2>
+          <br />
+          <label>
+            <span class="sample" data-bind="style: { backgroundColor: $parent.selectedColor }"></span>
+            <input class="small" type="text" data-bind="value: name, valueUpdate: 'afterkeydown'" />
+          </label>
+          <br />
+          <div class="slider">
+            <progress data-bind="attr: { 'min': $parent.ymin, 'max': $parent.ymax }"></progress>
+            <input type="range" data-bind="attr: { 'min': $parent.ymin, 'max': $parent.ymax }, value: value" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/knockout-2.3.0.debug.js"></script>
+    <script src="extenders.js"></script>
+    <script src="../lib/highcharts.js"></script>
+    <script src="../lib/highcharts-more.js"></script>
+    <script src="index.js"></script>
+    <script src="high-bar.js"></script>
+
+    <script type="text/javascript">
+      var chart = new BarChart({
+        el: '#canvas',
+        ymin: -10,
+        ymax: 20,
+        data: [{
+          name: 'Col 1',
+          value: 5
+        }, {
+          name: 'Col 2',
+          value: 10
+        }]
+      });
+
+      $(chart.render.bind(chart));
+    </script>
+  </body>
+</html>

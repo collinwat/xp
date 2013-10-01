@@ -1,0 +1,73 @@
+hr {
+  margin: 10px 0px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input.small {
+  width: 100px;
+}
+
+.slider {
+  position: relative;
+  height: 15px;
+  width: 206px;
+  margin: 0px auto;
+}
+
+.slider input[type=range] {
+  width: 100%;
+  position: absolute;
+  margin-top: -4px;
+  top: 0px;
+  left: 0px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+}
+
+.slider progress {
+  width: 194px;
+  display: block;
+  margin-top: 4px;
+  margin-left: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+}
+
+.slider progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.slider progress::-webkit-progress-value {
+  background-color: #DE5228;
+  border-radius: 4px;
+}
+
+.steps {
+  margin: 0px;
+  font-size: 32px;
+}
+
+.sample {
+  width: 25px;
+  height: 14px;
+  display: inline-block;
+  border: solid 1px #ddd;
+  border-radius: 4px;
+}

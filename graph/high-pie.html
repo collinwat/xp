@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="An editable bar graph with highcharts" />
+    <title>Highcharts Pie Graph | XP</title>
+
+    <link rel="stylesheet" href="../lib/normalize.min.css" />
+    <link rel="stylesheet" href="../lib/project.css" />
+    <link rel="stylesheet" href="http://static.haikudeck.com/lib/bootstrap2.3.1/css/bootstrap.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="high-pie.css" />
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+    <p class="chromeframe">
+      You are using an <strong>outdated</strong> browser. Please
+      <a href="http://browsehappy.com/">upgrade your browser</a>
+      or <a href="http://www.google.com/chromeframe/?redirect=true">
+      activate Google Chrome Frame</a> to improve your experience.
+    </p>
+    <![endif]-->
+    <div id="editor">
+      <div id="canvas"></div>
+      <div id="controls" class="text-center">
+        <br />
+        <div class="right">
+          <div class="pie-toggle">
+            <span class="pie-toggle-tab pie-toggle-selected pie-percent">%</span>
+            <span class="pie-toggle-tab pie-number">#</span>
+          </div>
+        </div>
+        <br />
+        <br />
+        <ol class="pie-data" data-bind="foreach: data">
+          <li>
+            <span class="pie-label" data-bind="text: $index() + 1, style: { borderColor: color }"></span>
+            <input class="pie-data-name" type="text" placeholder="Edit Label" data-bind="value: name" />
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/knockout-2.3.0.debug.js"></script>
+    <script src="extenders.js"></script>
+    <script src="../lib/highcharts.js"></script>
+    <script src="../lib/highcharts-more.js"></script>
+    <script src="index.js"></script>
+    <script src="high-pie.js"></script>
+
+    <script type="text/javascript">
+      var chart = new PieChart({
+        el: '#canvas'
+      });
+
+      $(chart.render.bind(chart));
+    </script>
+  </body>
+</html>

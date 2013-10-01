@@ -1,0 +1,33 @@
+#editor {
+  position: absolute;
+  top: 8%;
+  bottom: 8%;
+  height: 76%;
+  left: 10%;
+  right: 10%;
+  width: 76%;
+  padding: 2%;
+  border: 1px solid #bbb;
+}
+
+#canvas {
+  position: absolute;
+  width: 70%;
+  height: 94%;
+}
+
+#controls {
+  position: absolute;
+  width: 25%;
+  right: 0px;
+  border-left: 1px solid #ccc;
+  height: 100%;
+  top: 0px;
+}
+
+#controls h2 {
+  color: #666;
+  font-weight: normal;
+  font-size: 24px;
+  margin: 10px 0px 0px;
+}
